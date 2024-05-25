@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap');
+
+:root{
+    --cor-primaria: #200001;
+    --cor-secundaria: #f2efe9;
+    --cor-fundo: #fffcf6;
+    --cor-preco: #F90000;
+    --cor-texto1: #FFFFFF;
+    --cor-texto2: #000000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter Tight", sans-serif
+}
+
+body{
+    background-color: var(--cor-fundo);
+}
+
+.cabecalho{
+    padding: 3vh 0;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    margin-top: 10px;
+    width: 125px;
+}
+
+.barra_nav{
+    padding: 3vh 0;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px
+}
+
+.barra_nav a{
+    text-decoration: none;
+    color: var(--cor-texto1);
+}
+
+.feather {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.container-imagem {
+    width: 100%; /* Define a largura do contêiner para ocupar toda a largura da página */
+    height: 65vh; /* Define a altura do contêiner conforme necessário */
+    background-image: url('sets/tacas.jpeg');
+    background-size: cover; /* Ajusta a largura da imagem para ocupar toda a largura do contêiner e mantém a altura proporcional */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secao-compras{
+    display: flex; /* alterado de block para flex */
+    flex-direction: column; /* mantém os itens em coluna */
+    justify-content: center;
+    gap: 5%;
+}
+
+.secao-compras__titulo{
+    margin-left: 14.5vw;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 35px
+}
+
+.secao-compras__produtos{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 4.5%;
+}
+
+
+.secao-compras__produtos__produto{
+    width: 20.8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.add-carrinho{
+    height: 10%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    transition: 0.15s ease-in;
+}
+
+.add-carrinho:hover{
+    background-color: #900c10
+}
+
+.vinho-box{
+    background-color: var(--cor-secundaria);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vinho-box__imagem{
+    width: 95%;
+    margin-top: -50px;
+    padding: 15px;
+    transition: 0.5s 
+}
+
+.vinho-box__imagem:hover {
+    transform: scale(1.05);
+}
+
+.nome-vinho{
+    padding: 2.5% 0 0.5% 0;
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 500;
+}
+
+.preco{
+    padding: 0.5% 0 2.5% 0;
+    color: var(--cor-preco);
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 800;
+}
+
+.add-carrinho_text{
+    font-family: "Inter Tight", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 25px 15px
+}
+
+
+.secao-compras__produtos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.secao-compras__produtos > .secao-compras__produtos__produto {
+    flex: 1 1 250px;
+    margin: 25px;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 10vh;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 500px;
+    margin-left: 11%;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .barra_nav {
+        padding: 3vh 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: 20px;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: var(--cor-texto1);
+    }
+
+    .barra_nav a {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: baseline;
+        background-color: var(--cor-primaria);
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .mobile-menu a {
+        color: var(--cor-texto1);
+        padding: 15px;
+        text-decoration: none;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-container {
+        display: flow;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        max-width: 500px;
+        margin-left: 11%;
+    }
+
+    .footer-container p{
+        margin-top: 15px
+    }
+}
